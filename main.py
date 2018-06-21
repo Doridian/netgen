@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from IPy import IP
 from yaml import load as yaml_load
