@@ -1,0 +1,34 @@
+domain: example.com
+network: 192.168.5.0/24
+dynamic_range:
+  from: 100
+  to: 254
+dns_servers:
+  - control-vip
+  - gateway
+  - gateway2
+ntp_servers:
+  - control-vip
+  - gateway
+  - gateway2
+routers: 
+  - gateway
+hosts:
+  gateway:
+    ip: 1
+  gateway2:
+    ip: 2
+  desktop:
+    mac: 00:00:00:00:00:01
+    ip: 3
+  control-vip:
+    ip: 4
+  controller:
+    ip: 5
+  chromecast:
+    mac: 00:00:00:00:00:03
+    ip: 6
+    options:
+      routers:
+        - control-vip
+
