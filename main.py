@@ -57,7 +57,7 @@ def format_ptrip(ipaddr, network):
 	plen = getsafeip(network).prefixlen()
 	netip = getnetworkip(ipaddr, network)
 	ipsplit = netip.strNormal(0).split('.')[:(plen >> 3) - 1:-1]
-	return '.'.join(ipsplit)	
+	return '.'.join(ipsplit)
 environment.filters['format_ptrip'] = format_ptrip
 
 # Gets the "Base address" of a subnet, 192.168.5.0/24 -> 192.168.5.0
@@ -89,5 +89,5 @@ def render_template(name):
 		outf.write(outstr)
 
 render_template('dhcpd.conf')
-render_template('network.zone')
-render_template('network-ptr.zone')
+render_template('network.conf')
+render_template('network-ptr.conf')
